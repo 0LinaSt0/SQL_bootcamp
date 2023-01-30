@@ -5,7 +5,7 @@
  * 			- implicit join based on the same column names in the joined
  *			  tables
  *
- * In this case NATURAL <inner> JOIN joins tables from column with same
+ * In this case 'NATURAL <inner> JOIN' joins tables from column with same
  * name. But in this case 'id' in table 'person_order' keeping information
  * about order id (not about person id) - that's wrong way.
  * That's why we redefine names of columns in 'person_order'. And now 'id'

@@ -34,7 +34,6 @@ from(
 	where visit_date = '2022-01-07'
 
 
-	select person_order.person_id as orders, person_visits.person_id as visitors
-from person_order, person_visits
-where person_visits.visit_date = '2022-01-07' AND person_order.order_date = '2022-01-07'
-limit (select count(person_id) from person_visits)
+select person_visits.person_id - person_order.person_id as difference
+from person_visits, person_order
+where person_order.order_date = '2022-01-07' and person_visits.visit_date = '2022-01-07'
