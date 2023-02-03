@@ -1,0 +1,10 @@
+\i /Users/msalena/Desktop/SQL_bootcamp/00/src/ex00/day00_ex00.sql
+\i /Users/msalena/Desktop/SQL_bootcamp/00/src/ex01/day00_ex01.sql
+\i /Users/msalena/Desktop/SQL_bootcamp/00/src/ex02/day00_ex02.sql
+\i /Users/msalena/Desktop/SQL_bootcamp/00/src/ex03/day00_ex03.sql
+\i /Users/msalena/Desktop/SQL_bootcamp/00/src/ex04/day00_ex04.sql
+\i /Users/msalena/Desktop/SQL_bootcamp/00/src/ex05/day00_ex05.sql
+\i /Users/msalena/Desktop/SQL_bootcamp/00/src/ex06/day00_ex06.sql
+\i /Users/msalena/Desktop/SQL_bootcamp/00/src/ex07/day00_ex07.sql
+\i /Users/msalena/Desktop/SQL_bootcamp/00/src/ex08/day00_ex08.sql
+\i /Users/msalena/Desktop/SQL_bootcamp/00/src/ex09/day00_ex09.sql
