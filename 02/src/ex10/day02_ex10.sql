@@ -1,5 +1,5 @@
 /*
- * Another desition (find least and greates elem in two column):
+ * Another solution (find least and greates elem in two column):
  *
  * 		 ___________________________________________________________
  * 		| select distinct least(p1.name, p2.name) as person_name1,	|
