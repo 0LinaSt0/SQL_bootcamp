@@ -8,6 +8,8 @@
  */
 
 
+-- <UNCOMMENT LIENS 13 and 23 FOR start.sql SCRIPT>
+
 -- drop view if exists v_generated_dates;
 
 create recursive view v_generated_dates(generated_date) as (

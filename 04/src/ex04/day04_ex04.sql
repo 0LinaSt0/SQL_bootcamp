@@ -1,3 +1,5 @@
+-- <UNCOMMENT LIENS 3 and 28 FOR start.sql SCRIPT>
+
 -- drop view if exists v_symmetric_union;
 
 create view v_symmetric_union as (

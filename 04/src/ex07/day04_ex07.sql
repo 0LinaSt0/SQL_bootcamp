@@ -3,6 +3,7 @@
  * 							   data changes in using tables in materialized view
  */
 
+-- <UNCOMMENT LIENS 19 FOR start.sql SCRIPT>
 
 -- create new Dmitriy's visit
 insert into person_visits values (
