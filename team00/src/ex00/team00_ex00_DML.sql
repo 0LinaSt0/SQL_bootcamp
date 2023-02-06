@@ -1,3 +1,14 @@
+/*
+ * https://habr.com/ru/post/255361/
+ * 
+ *
+ * In this file useded SQL DML statement for
+ *
+ * 	__________________________________________________________________________
+ * 	DML – Data Manipulation Language (for selecting/adding/refreshing/deleting
+ * 		  table's datas)
+ */
+
 select (
 	nd1.cost + nd2.cost + nd3.cost + nd4.cost
 ) as total_cost,

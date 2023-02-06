@@ -1,3 +1,13 @@
+/*
+ * https://habr.com/ru/post/255361/
+ *
+ *
+ * In this file useded DDL' for table creation with INSERT's of data
+ *
+ * 	________________________________________________________________________________
+ * 	'DDL – Data Definition Language (for creating/changing/dropping tables and links)
+ */
+
 create table nodes (
 	node1 char(1) not null,
 	node2 char(1) not null,
