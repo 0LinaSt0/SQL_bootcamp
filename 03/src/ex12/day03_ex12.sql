@@ -2,7 +2,7 @@
 --CANNOT create
 
 
-
+/*
 insert into person_order(id, person_id, menu_id, order_date)
 select *
 from (
@@ -17,4 +17,4 @@ from (
 		join menu on menu.id = person_order.menu_id
 			and menu.pizza_name = 'greek pizza'
 ) adding
-
+*/
