@@ -4,4 +4,6 @@
  * WHERE - filter rows based on a specified condition
  */
 
-select name, age from person where address = 'Kazan';
+select name, age
+from person
+where address = 'Kazan';

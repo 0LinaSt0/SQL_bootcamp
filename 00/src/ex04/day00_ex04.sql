@@ -7,8 +7,9 @@
  * CONCAT(name, ' (age:', age, ',gender:''', gender, ''',address:''', address, ''')')
  */
 
-select name || ' (age:' || age || ',gender:''' || gender
-		|| ''',address:''' || address || ''')'
-		as person_information
-	from person
-	order by person_information;
+select (
+	name || ' (age:' || age || ',gender:''' || gender
+	|| ''',address:''' || address || ''')'
+	) as person_information
+from person
+order by 1 asc;
