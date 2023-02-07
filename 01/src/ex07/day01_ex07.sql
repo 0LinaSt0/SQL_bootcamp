@@ -23,8 +23,6 @@
 
 select order_date,
 	(name || ' (age:' || age || ')') as person_information
-from
-	person_order
-	join person
-	on person_order.person_id = person.id
-order by 1 asc, 2 asc
+from person_order
+	join person on person.id = person_order.person_id
+order by 1, 2 asc;

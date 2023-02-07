@@ -17,13 +17,11 @@
  */
 
 
-select
-	visit_date as action_date,
-	person_id as person_id
-	from person_visits
+select order_date as action_date,
+	person_id
+from person_order
 intersect
-select
-	order_date as action_date,
-	person_id as person_id
-	from person_order
+select visit_date as action_date,
+	person_id
+from person_visits
 order by 1 asc, 2 desc;

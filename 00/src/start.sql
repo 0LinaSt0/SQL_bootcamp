@@ -9,6 +9,7 @@
  * 		 -----------------------------------------------------------
  */
 
+ 
 select '~~~~EXERCISE_00~~~~' as next;
 \i /Users/$USER/Desktop/SQL_bootcamp/00/src/ex00/day00_ex00.sql;
 select '~~~~EXERCISE_01~~~~' as next;

@@ -14,14 +14,11 @@
  */
 
 
-select prs.name as person_name,
-	mn.pizza_name as pizza_name,
-	pzz.name as pizzeria
+select person.name as person_name,
+	pizza_name,
+	pizzeria.name as pizzeria
 from person_order
-	join person as prs
-		on person_order.person_id = prs.id
-	join menu as mn
-		on person_order.menu_id = mn.id
-	join pizzeria as pzz
-		on mn.pizzeria_id = pzz.id
-order by 1, 2, 3
+	join person on person.id = person_order.person_id
+	join menu on menu.id = person_order.menu_id
+	join pizzeria on pizzeria.id = menu.pizzeria_id
+order by 1, 2, 3 asc;

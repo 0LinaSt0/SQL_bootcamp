@@ -16,6 +16,6 @@
 select order_date,
 	(name || ' (age:' || age || ')') as person_information
 from
-	person_order as person_order(t_id, id, menu_id, order_date)
+	person_order as od(o_id, id, menu_id, order_date)
 	natural join person
-order by 1 asc, 2 asc
+order by 1, 2 asc;

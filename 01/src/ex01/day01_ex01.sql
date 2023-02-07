@@ -14,12 +14,12 @@ from(
 	select
 		pizza_name as object_name,
 		'm' as type_name
-		from menu
+	from menu
 	union all
 	select
 		name as object_name,
 		'p' as type_name
-		from person
+	from person
 	order by type_name desc, object_name
 ) as t_orderly
 
