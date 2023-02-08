@@ -1,4 +1,5 @@
-select name
-from person
-where gender = 'female' and age > 25
-order by 1
+select person.name
+from person_order
+	join person on person.id = person_order.person_id
+		and person.age > 25 and person.gender = 'female'
+order by 1;
