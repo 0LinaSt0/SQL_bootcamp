@@ -1,36 +1,24 @@
-drop view if exists v_personal_order;
 
-create view v_personal_order as (
-	select sum(person_id)
-	from person_order
-	group by person_id
-);
+--truncate person_discounts; delete from person_discounts;
 
-insert into person_discounts values (
-	(
-		select
-			row_number() over (
-				partition by id
-			) as id
-		from person_order
-	),
-	(select person_id from person_order),
-	(
-		select pizzeria_id
-		from person_order
-			join menu on menu.id = person_order.menu_id
-	),
-	(
-		select case
-				when (
-					select * from v_personal_order
-				) = 1 then 10.5
-				when (
-					select * from v_personal_order
-				) = 2 then 22
+insert into person_discounts (id, person_id, pizzeria_id, discount)
+(
+	select
+		row_number() over () as id,
+		person_order.person_id,
+		menu.pizzeria_id,
+		(
+			case
+				when count(*) = 1 then 10.5
+				when count(*) = 2 then 22
 				else 30
 			end
-	)
+		) as discount
+	from person_order
+		join menu on menu.id = person_order.menu_id
+ 	group by person_id, pizzeria_id
 );
+
+--select * from person_discounts;
 
 
