@@ -30,3 +30,4 @@ select '~~~~EXERCISE_08~~~~' as next;
 select '~~~~EXERCISE_09~~~~' as next;
 \i /Users/msalena/Desktop/SQL_bootcamp/02/src/ex09/day02_ex09.sql
 select '~~~~EXERCISE_10~~~~' as next;
+\i /Users/msalena/Desktop/SQL_bootcamp/02/src/ex10/day02_ex09.sql
