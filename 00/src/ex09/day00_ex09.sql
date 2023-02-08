@@ -3,7 +3,7 @@ select n_person as person_name,
 from (
 	select (
 			select name
-			from person_name
+			from person
 			where id = person_visits.person_id
 		) as n_person,
 		(
