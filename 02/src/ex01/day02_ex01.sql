@@ -12,18 +12,16 @@
  *
  * In this case we used casting in generate_series for generating dates.
  * Created set includes date and time but we need to take just date that's
- * why there used casting 'd::date'.
+ * why there used casting '...::date'.
  */
 
-select d::date as missing_date
-from
-	generate_series('2022-01-01'::timestamp, '2022-01-10'::timestamp, '1 day'::interval) as d
-	left join
-		(select person_id, visit_date
-		 from person_visits
-		 where person_visits.person_id = 1 or person_visits.person_id = 2
-		) as pv
-	on pv.visit_date = d::date
-where pv.visit_date is null
-order by missing_date asc
+select visit_date::date as missing_date
+from generate_series('2022-01-01'::timestamp,
+		'2022-01-10'::timestamp, '1 day'::interval)
+		as visit_date
+		left join (
+			select * from person_visits where person_id = 1 or person_id = 2
+		) as person_visits using(visit_date)
+where person_visits.id is NULL
+order by 1 asc;
 

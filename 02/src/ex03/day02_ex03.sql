@@ -13,14 +13,18 @@
  * 		 -----------------------------------
  */
 
-with cte_visiters as (
-	select visit_date
-	from person_visits
-	where person_id = 1 or person_id = 2
+ 
+with cte_day_generator as (
+	select generate_series('2022-01-01'::timestamp,
+		'2022-01-10'::timestamp, '1 day'::interval)
+	as visit_date
 )
-select d::date as missing_date
-from
-	generate_series('2022-01-01'::timestamp, '2022-01-10'::timestamp, '1 day'::interval) as d
-	left join cte_visiters on d::date = visit_date
-where cte_visiters.visit_date is null
-order by 1
+
+select visit_date::date as missing_date
+from cte_day_generator
+		left join (
+			select * from person_visits where person_id = 1 or person_id = 2
+		) as person_visits using(visit_date)
+where person_visits.id is NULL
+order by 1 asc;
+

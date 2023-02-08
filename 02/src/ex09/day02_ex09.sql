@@ -22,17 +22,17 @@
  */
 
 
-select person.name
+select person.name as person_name
 from person_order
 	join person on person.id = person_order.person_id
+		and person.gender = 'female'
 	join menu on menu.id = person_order.menu_id
-where person.gender = 'female' and
-	menu.pizza_name = 'pepperoni pizza'
+		and menu.pizza_name = 'pepperoni pizza'
 intersect
-select person.name
+select person.name as person_name
 from person_order
 	join person on person.id = person_order.person_id
+		and person.gender = 'female'
 	join menu on menu.id = person_order.menu_id
-where person.gender = 'female' and
-	menu.pizza_name = 'cheese pizza'
-order by 1
+		and menu.pizza_name = 'cheese pizza'
+order by 1;

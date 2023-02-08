@@ -38,12 +38,12 @@
  */
 
 
-select m.pizza_name,
-	pz.name as pizzeria_name
-from person_order as po
-	join person as pr on po.person_id = pr.id
-	join menu as m on po.menu_id = m.id
-    join pizzeria as pz on m.pizzeria_id = pz.id
-where pr.name = 'Denis' or pr.name = 'Anna'
-order by 1, 2
+select pizza_name,
+	pizzeria.name as pizzeria_name
+from person_order
+	join menu on menu.id = person_order.menu_id
+	join pizzeria on pizzeria.id = menu.pizzeria_id
+	join person on person.id = person_order.person_id
+where person.name = 'Anna' or person.name = 'Denis'
+order by 1, 2;
 

@@ -21,6 +21,6 @@ select (case
 
 drop database sql;
 create database sql;
-grant all privileges on database sql to $USER;
+grant all privileges on database sql to msalena;
 \c sql;
 
