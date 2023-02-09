@@ -1,7 +1,8 @@
 select person.name,
 	menu.pizza_name,
 	menu.price,
-	(menu.price - (menu.price * person_discounts.discount / 100)::bigint
+	(
+		menu.price - (menu.price * person_discounts.discount / 100)::bigint
 	) as discount_price,
 	pizzeria.name as pizzeria_name
 from person_order
