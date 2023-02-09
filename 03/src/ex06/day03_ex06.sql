@@ -9,4 +9,4 @@ from menu m1
 	join pizzeria p1 on p1.id = m1.pizzeria_id
 	join pizzeria p2 on p2.id = m2.pizzeria_id
 		and p2.name != p1.name
-order by 1
+order by 1;
