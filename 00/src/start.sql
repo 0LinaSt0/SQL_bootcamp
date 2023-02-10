@@ -3,7 +3,7 @@
  *
  * ! Please, check that paths are correct !
  *
- * For starting script to execute command below in pgAdmin4:
+ * For starting script to execute command below:
  * 		 ___________________________________________________________
  * 		| $ \i /Users/msalena/Desktop/SQL_bootcamp/00/src/start.sql	|
  * 		 -----------------------------------------------------------

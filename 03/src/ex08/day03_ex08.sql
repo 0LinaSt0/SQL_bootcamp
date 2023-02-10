@@ -6,5 +6,9 @@ insert into menu values (
 );
 
 
--- <UNCOMMENT FOR start.sql SCRIPT>
--- select * from menu;
+-- CHECK INSERTING
+select * 
+from menu 
+where pizzeria_id = 2 and pizza_name = 'sicilian pizza'
+	and price = 900;
+

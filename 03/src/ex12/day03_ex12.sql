@@ -9,5 +9,9 @@ insert into person_order
 		) as gs on gs.i = person.id ;
 
 
--- <UNCOMMENT FOR start.sql SCRIPT>
--- select * from person_order;
+-- CHECK INSERTING
+select * 
+from person_order
+where (person_id between 1 and 9) and menu_id = 19
+	and order_date = '2022-02-25';
+

@@ -38,5 +38,13 @@ insert into person_order (id, person_id, menu_id, order_date)
 		);
 
 
--- <UNCOMMENT FOR start.sql SCRIPT>
--- select * from person_order;
+-- CHECK INSERTING
+select * 
+from person_order
+where person_id = 4 and menu_id = 20 
+	and order_date = '2022-02-24'
+union all
+select * 
+from person_order
+where person_id = 6 and menu_id = 20 
+	and order_date = '2022-02-24';

@@ -10,5 +10,6 @@ update menu
 set price = (price - price*0.1)::bigint
 where pizza_name = 'greek pizza';
 
--- <UNCOMMENT FOR start.sql SCRIPT>
--- select * from menu;
+
+-- CHECK INSERTING
+select * from menu;

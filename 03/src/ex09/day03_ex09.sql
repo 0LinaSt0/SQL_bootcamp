@@ -22,8 +22,8 @@
  */
 
 
-insert into person_visits (id, person_id, pizzeria_id, visit_date)
-	values
+insert into person_visits 
+	values 
 	(
 		(select max(id) + 1 from person_visits),
 		(select id from person where name = 'Denis'),
@@ -38,5 +38,13 @@ insert into person_visits (id, person_id, pizzeria_id, visit_date)
 	);
 
 
--- <UNCOMMENT FOR start.sql SCRIPT>
--- select * from person_vivits;
+-- CHECK INSERTING
+select * 
+from person_visits 
+where person_id = 4 and pizzeria_id = 2 
+	and visit_date = '2022-02-24'
+union all 
+select * 
+from person_visits 
+where person_id = 6 and pizzeria_id = 2 
+	and visit_date = '2022-02-24';
