@@ -7,15 +7,18 @@
  *					the view are generated every time the view is accessed.
  */
 
+-- drop view if exists v_persons_female;
+-- drop view if exists v_persons_male;
+
+
 create view v_persons_female as (
-	select * from person
-	where person.gender = 'female'
+		select * from person where gender = 'female'
 );
 
 create view v_persons_male as (
-	select * from person
-	where person.gender = 'male'
+		select * from person where gender = 'male'
 );
 
-select * from v_persons_female;
-select * from v_persons_female;
+-- select * from v_persons_female;
+-- select * from v_persons_male;
+
