@@ -22,7 +22,8 @@
  */
 
 
-insert into person_visits values (
+insert into person_visits (id, person_id, pizzeria_id, visit_date)
+	values
 	(
 		(select max(id) + 1 from person_visits),
 		(select id from person where name = 'Denis'),
@@ -34,8 +35,7 @@ insert into person_visits values (
 		(select id from person where name = 'Irina'),
 		(select id from pizzeria where name = 'Dominos'),
 		'2022-02-24'
-	)
-);
+	);
 
 
 -- <UNCOMMENT FOR start.sql SCRIPT>

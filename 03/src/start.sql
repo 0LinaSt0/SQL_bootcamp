@@ -13,6 +13,13 @@
  */
 
 
+-- REFRESH DATABASE
+
+\i /Users/msalena/Desktop/SQL_bootcamp/db_refreshings/recreate_sql_db.sql;
+\i /Users/msalena/Desktop/SQL_bootcamp/03/materials/model.sql;
+
+
+
 select '~~~~EXERCISE_00~~~~' as next;
 \i /Users/msalena/Desktop/SQL_bootcamp/03/src/ex00/day03_ex00.sql
 select '~~~~EXERCISE_01~~~~' as next;
@@ -43,7 +50,4 @@ select '~~~~EXERCISE_13~~~~' as next;
 \i /Users/msalena/Desktop/SQL_bootcamp/03/src/ex13/day03_ex13.sql
 
 
--- REFRESH DATABASE
 
-\i /Users/msalena/Desktop/SQL_bootcamp/recreate_sql_db.sql;
-\i /Users/msalena/Desktop/SQL_bootcamp/03/materials/model.sql;
