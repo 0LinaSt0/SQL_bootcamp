@@ -9,6 +9,11 @@
  * 		 -----------------------------------------------------------
  */
 
+-- REFRESH DATABASE
+
+\i /Users/msalena/Desktop/SQL_bootcamp/db_refreshings/recreate_sql_db.sql;
+\i /Users/msalena/Desktop/SQL_bootcamp/00/materials/model.sql;
+
 
 select '~~~~EXERCISE_00~~~~' as next;
 \i /Users/msalena/Desktop/SQL_bootcamp/00/src/ex00/day00_ex00.sql;

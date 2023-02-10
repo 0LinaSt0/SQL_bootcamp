@@ -4,3 +4,4 @@ except
 select visit_date
 from person_visits
 order by 1;
+

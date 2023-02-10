@@ -12,4 +12,4 @@ where pizza_name = 'greek pizza';
 
 
 -- CHECK INSERTING
-select * from menu;
+select * from menu order by 1;

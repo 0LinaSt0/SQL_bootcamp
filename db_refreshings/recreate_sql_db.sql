@@ -10,7 +10,7 @@ select (case
 		when (
 			select numbackends
 			from pg_stat_database
-			where datname='sql' and numbackends !=0
+			where datname='sql' and numbackends != 0
 		) != 0 then (
 			select pg_terminate_backend(pid)
 			from pg_stat_activity

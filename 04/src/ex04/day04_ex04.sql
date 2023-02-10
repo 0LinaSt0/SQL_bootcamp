@@ -1,5 +1,3 @@
--- <UNCOMMENT LIENS 3 and 28 FOR start.sql SCRIPT>
-
 -- drop view if exists v_symmetric_union;
 
 create view v_symmetric_union as (
@@ -25,4 +23,6 @@ create view v_symmetric_union as (
 	order by 1
 );
 
--- select * from v_symmetric_union;
+
+-- CHECK CREATING
+select * from v_symmetric_union;

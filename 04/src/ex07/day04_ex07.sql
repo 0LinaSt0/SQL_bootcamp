@@ -3,8 +3,6 @@
  * 							   data changes in using tables in materialized view
  */
 
--- <UNCOMMENT LIENS 19 FOR start.sql SCRIPT>
-
 -- create new Dmitriy's visit
 insert into person_visits (id, person_id, pizzeria_id, visit_date)
 	values (
@@ -24,4 +22,6 @@ insert into person_visits (id, person_id, pizzeria_id, visit_date)
 -- update mv_dmitriy_visits_and_eats
 refresh materialized view mv_dmitriy_visits_and_eats;
 
--- select * from mv_dmitriy_visits_and_eats;
+
+-- CHECK INSERTING
+select * from mv_dmitriy_visits_and_eats;

@@ -19,6 +19,8 @@ create view v_persons_male as (
 		select * from person where gender = 'male'
 );
 
--- select * from v_persons_female;
--- select * from v_persons_male;
+
+-- CHECK CREATING
+select * from v_persons_female;
+select * from v_persons_male;
 

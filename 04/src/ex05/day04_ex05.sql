@@ -1,5 +1,3 @@
--- <UNCOMMENT LIENS 3 and 16 FOR start.sql SCRIPT>
-
 -- drop view if exists v_price_with_discount;
 
 create view v_price_with_discount as (
@@ -13,4 +11,6 @@ create view v_price_with_discount as (
 	order by 1, 2
 );
 
--- select * from v_price_with_discount;
+
+-- CHECK CREATING
+select * from v_price_with_discount;

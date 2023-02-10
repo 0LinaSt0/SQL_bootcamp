@@ -19,8 +19,6 @@
  */
 
 
--- <UNCOMMENT LIENS 13 and 23 FOR start.sql SCRIPT>
-
 -- drop view if exists v_generated_dates;
 
 create view v_generated_dates as (
@@ -29,4 +27,6 @@ create view v_generated_dates as (
 	order by 1
 );
 
--- select * from v_generated_dates;
+
+-- CHECK CREATING
+select * from v_generated_dates;

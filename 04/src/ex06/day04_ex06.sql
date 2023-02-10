@@ -7,8 +7,6 @@
  *								 view expression are stored in a database system
  */
 
--- <UNCOMMENT LIENS 12 and 24 FOR start.sql SCRIPT>
-
 -- drop materialized view if exists mv_dmitriy_visits_and_eats;
 
 create materialized view mv_dmitriy_visits_and_eats as (
@@ -22,4 +20,6 @@ create materialized view mv_dmitriy_visits_and_eats as (
 	where visit_date = '2022-01-08'
 );
 
--- select * from mv_dmitriy_visits_and_eats;
+
+-- CHECK CREATING
+select * from mv_dmitriy_visits_and_eats;

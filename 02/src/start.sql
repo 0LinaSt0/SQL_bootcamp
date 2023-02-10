@@ -5,9 +5,15 @@
  *
  * For starting script to execute command below:
  * 		 ___________________________________________________________
- * 		| $ \i /Users/msalena/Desktop/SQL_bootcamp/01/src/start.sql	|
+ * 		| $ \i /Users/msalena/Desktop/SQL_bootcamp/02/src/start.sql	|
  * 		 -----------------------------------------------------------
  */
+
+
+-- REFRESH DATABASE
+
+\i /Users/msalena/Desktop/SQL_bootcamp/db_refreshings/recreate_sql_db.sql;
+\i /Users/msalena/Desktop/SQL_bootcamp/02/materials/model.sql;
 
 select '~~~~EXERCISE_00~~~~' as next;
 \i /Users/msalena/Desktop/SQL_bootcamp/02/src/ex00/day02_ex00.sql
@@ -30,4 +36,4 @@ select '~~~~EXERCISE_08~~~~' as next;
 select '~~~~EXERCISE_09~~~~' as next;
 \i /Users/msalena/Desktop/SQL_bootcamp/02/src/ex09/day02_ex09.sql
 select '~~~~EXERCISE_10~~~~' as next;
-\i /Users/msalena/Desktop/SQL_bootcamp/02/src/ex10/day02_ex09.sql
+\i /Users/msalena/Desktop/SQL_bootcamp/02/src/ex10/day02_ex10.sql

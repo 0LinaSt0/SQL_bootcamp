@@ -16,7 +16,9 @@
 
 \i /Users/msalena/Desktop/SQL_bootcamp/db_refreshings/recreate_sql_db.sql;
 \i /Users/msalena/Desktop/SQL_bootcamp/04/materials/model.sql;
+select '*************************Update table with day03*************************' as start;
 \i /Users/msalena/Desktop/SQL_bootcamp/db_refreshings/changes_of_day03.sql;
+select '*************************************************************************' as end;
 
 
 select '~~~~EXERCISE_00~~~~' as next;
