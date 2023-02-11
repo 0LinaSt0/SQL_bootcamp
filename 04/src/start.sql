@@ -3,9 +3,6 @@
  *
  * ! Please, check that paths are correct !
  *
- * Please, uncomment all lines with mark <UNCOMMENT FOR start.sql SCRIPT>
- * in exercises 02, 04-07 for correct work of start.sql script
- *
  * For starting script to execute command below:
  * 		 ___________________________________________________________
  * 		| $ \i /Users/msalena/Desktop/SQL_bootcamp/04/src/start.sql	|
