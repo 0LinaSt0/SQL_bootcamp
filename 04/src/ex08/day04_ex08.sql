@@ -27,10 +27,26 @@ select 'v_persons_male' as view,
 	end
 	) as "is found"
 union
+select 'v_generated_dates' as view,
+	(case
+		when not exists (
+			select relname from pg_class where relname='v_generated_dates'
+		) then 'not exists' else 'exists'
+	end
+	) as "is found"
+union
 select 'v_symmetric_union' as view,
 	(case
 		when not exists (
 			select relname from pg_class where relname='v_symmetric_union'
+		) then 'not exists' else 'exists'
+	end
+	) as "is found"
+union
+select 'v_price_with_discount' as view,
+	(case
+		when not exists (
+			select relname from pg_class where relname='v_price_with_discount'
 		) then 'not exists' else 'exists'
 	end
 	) as "is found"
