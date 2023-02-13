@@ -13,11 +13,9 @@ create index if not exists idx_person_order_multi
 
 set enable_seqscan = off;
 
-explain analyse select
+explain analyze select
 	person_id,
 	menu_id,
 	order_date
-from
-	person_order
-where
-	person_id = 8 and menu_id = 19;
+from person_order
+where person_id = 8 and menu_id = 19;

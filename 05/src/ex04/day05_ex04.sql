@@ -10,5 +10,5 @@ create unique index if not exists idx_menu_unique
 
 set enable_seqscan = off;
 
-explain analyse select pizzeria_id
+explain analyze select pizzeria_id
 from menu;
