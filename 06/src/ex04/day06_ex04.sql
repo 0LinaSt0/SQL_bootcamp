@@ -28,5 +28,3 @@ set default 0;
 alter table person_discounts
 add constraint ch_range_discount check(discount between 0 and 100);
 
--- check all constraints for table
-\d+ person_discounts;

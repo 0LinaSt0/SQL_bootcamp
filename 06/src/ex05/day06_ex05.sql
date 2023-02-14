@@ -13,12 +13,8 @@ comment on column person_discounts.pizzeria_id
 comment on column person_discounts.discount
 	is 'Percentage discount per person';
 
-comment on constraint fd_person_discounts_person_id on person_discounts
+comment on constraint fk_person_discounts_person_id on person_discounts
 	is 'Constraint for person_id column (foreign key to referens to the person.id)';
 
-comment on constraint fd_person_discounts_pizzeria_id on person_discounts
+comment on constraint fk_person_discounts_pizzeria_id on person_discounts
 	is 'Constraint from pizzeria_id colimn (foreign key to reference to the pizzeria.id)';
-
-
-check all constraints for table
-\dt+ person_discounts;

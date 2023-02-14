@@ -22,3 +22,6 @@ create table person_discounts (
 		foreign key (pizzeria_id)
 		references pizzeria(id)
 );
+
+
+select * from person_discounts;
