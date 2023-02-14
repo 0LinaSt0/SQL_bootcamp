@@ -7,24 +7,18 @@
  */
 
 
---drop sequence if exists seq_person_discounts cascade;
-
-
-create sequence if not exists seq_person_discounts
+create or replace sequence seq_person_discounts
 	start 1
 	increment 1;
 
--- Show all sequences in th database
---select relname sequence_name
---from pg_class
---where relkind = 'S';
---
-
-
 alter table person_discounts
-alter column id
+alter_column id
 set default nextval('seq_person_discounts');
 select setval('seq_person_discounts', ((select count(*) from person_discounts) + 1));
 
+-- Show all sequences in th database
+select relname sequence_name
+from pg_classalter
+where relkind = 'S';
+--
 
---select * from person_discounts;

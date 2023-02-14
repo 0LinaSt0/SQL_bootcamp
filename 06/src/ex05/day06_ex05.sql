@@ -20,5 +20,5 @@ comment on constraint fd_person_discounts_pizzeria_id on person_discounts
 	is 'Constraint from pizzeria_id colimn (foreign key to reference to the pizzeria.id)';
 
 
--- check all constraints for table
--- \dt+ person_discounts;
+check all constraints for table
+\dt+ person_discounts;

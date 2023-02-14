@@ -3,6 +3,4 @@ create unique index if not exists idx_person_discounts_unique
 
 set enable_seqscan = off;
 
-explain analyse select *
-from person_discounts
-where person_id > 8;
+explain analyze select * from person_discounts where person_id = 2;
