@@ -1,9 +1,13 @@
+
+
+---
+
 Useful command:
 
 1. Connect to DB:
 	```shell
 	$ /Users/$USER/.brew/opt/postgresql@14/bin/postgres -D /Users/$USER/.brew/var/postgresql@14
-	``` 
+	```
 2. Start DB:
 	```shell
 	$ psql postges
