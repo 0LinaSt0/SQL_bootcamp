@@ -18,16 +18,17 @@ create or replace view v_subject_code as (
 	order by 1, 2
 );
 
-\echo "RESULT BEFORE CREATING INDEX";
+\echo "!!!RESULT BEFORE CREATING INDEX!!!"
 explain analyse select * from v_subject_code;
 
 create index if not exists idx_1 on pizzeria (rating);
 
 set enable_seqscan = off;
 
-\echo "RESULT AFTER CREATING INDEX";
-explain analyse select * from v_subject_code
+\echo "!!!RESULT AFTER CREATING INDEX!!!"
+explain analyse select * from v_subject_code;
 
-drop view if execute v_subject_code;
+drop view if exists v_subject_code;
+
 
 

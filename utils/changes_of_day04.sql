@@ -2,11 +2,8 @@
  * Apply change of day04
  */
 
+\i /Users/msalena/Desktop/SQL_bootcamp/04/src/ex06/day04_ex06.sql
 \i /Users/msalena/Desktop/SQL_bootcamp/04/src/ex07/day04_ex07.sql
-
-
-
-
 
 
 /* For online db:
