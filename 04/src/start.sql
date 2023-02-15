@@ -1,41 +1,81 @@
 /*
  * EXECUTE EXERCISES
  *
- * ! Please, check that paths are correct !
+ * !   !   ! Please, check that paths are correct !   !   !
  *
- * For starting script to execute command below:
+ * 	You should change variable 'project_path' which must be
+ * 	a absolute path to the root folder of the checking day
+ * !   !   !   !   !   !   !   !   !   !   !   !   !   !   !
+ *
+ * For starting script to execute command '\i' with absolute path
+ * to this file as example below:
  * 		 ___________________________________________________________
  * 		| $ \i /Users/msalena/Desktop/SQL_bootcamp/04/src/start.sql	|
  * 		 -----------------------------------------------------------
  */
 
+-- SET VARIABLES
+\set project_path /Users/msalena/Desktop/SQL_bootcamp/04
+
+\set utilst_path :project_path / ../utils
+\set recreate_db_path :utilst_path /recreate_sql_db.sql
+\set day03_changes :utilst_path /changes_of_day03.sql
+
+\set model_path :project_path /materials/model.sql
+\set src_folder :project_path /src
+
+\set day_variable day04_
+--
+
+
  -- REFRESH DATABASE
+\i :recreate_db_path
+\i :model_path
 
-\i /Users/msalena/Desktop/SQL_bootcamp/db_refreshings/recreate_sql_db.sql;
-\i /Users/msalena/Desktop/SQL_bootcamp/04/materials/model.sql;
-select '*************************Update table with day03*************************' as start;
-\i /Users/msalena/Desktop/SQL_bootcamp/db_refreshings/changes_of_day03.sql;
-select '*************************************************************************' as end;
+\echo '*******************Update table with day03******************'
+\i :day03_changes
+\echo '************************************************************'
+--
 
 
-select '~~~~EXERCISE_00~~~~' as next;
-\i /Users/msalena/Desktop/SQL_bootcamp/04/src/ex00/day04_ex00.sql;
-select '~~~~EXERCISE_01~~~~' as next;
-\i /Users/msalena/Desktop/SQL_bootcamp/04/src/ex01/day04_ex01.sql;
-select '~~~~EXERCISE_02~~~~' as next;
-\i /Users/msalena/Desktop/SQL_bootcamp/04/src/ex02/day04_ex02.sql;
-select '~~~~EXERCISE_03~~~~' as next;
-\i /Users/msalena/Desktop/SQL_bootcamp/04/src/ex03/day04_ex03.sql;
-select '~~~~EXERCISE_04~~~~' as next;
-\i /Users/msalena/Desktop/SQL_bootcamp/04/src/ex04/day04_ex04.sql;
-select '~~~~EXERCISE_05~~~~' as next;
-\i /Users/msalena/Desktop/SQL_bootcamp/04/src/ex05/day04_ex05.sql;
-select '~~~~EXERCISE_06~~~~' as next;
-\i /Users/msalena/Desktop/SQL_bootcamp/04/src/ex06/day04_ex06.sql;
-select '~~~~EXERCISE_07~~~~' as next;
-\i /Users/msalena/Desktop/SQL_bootcamp/04/src/ex07/day04_ex07.sql;
-select '~~~~EXERCISE_08~~~~' as next;
-\i /Users/msalena/Desktop/SQL_bootcamp/04/src/ex08/day04_ex08.sql;
+-- EXECUTE EXERCISES
+\echo '\n\t\033[0;32m~~~~EXERCISE_00~~~~\033[0m'
+\set full_path :src_folder /ex00/ :day_variable ex00.sql
+\i :full_path
+\i :print_indexes_list
+
+\echo '\n\t\033[0;32m~~~~EXERCISE_01~~~~\033[0m'
+\set full_path :src_folder /ex01/ :day_variable ex01.sql
+\i :full_path
+
+\echo '\n\t\033[0;32m~~~~EXERCISE_02~~~~\033[0m'
+\set full_path :src_folder /ex02/ :day_variable ex02.sql
+\i :full_path
+
+\echo '\n\t\033[0;32m~~~~EXERCISE_03~~~~\033[0m'
+\set full_path :src_folder /ex03/ :day_variable ex03.sql
+\i :full_path
+
+\echo '\n\t\033[0;32m~~~~EXERCISE_04~~~~\033[0m'
+\set full_path :src_folder /ex04/ :day_variable ex04.sql
+\i :full_path
+
+\echo '\n\t\033[0;32m~~~~EXERCISE_05~~~~\033[0m'
+\set full_path :src_folder /ex05/ :day_variable ex05.sql
+\i :full_path
+
+\echo '\n\t\033[0;32m~~~~EXERCISE_06~~~~\033[0m'
+\set full_path :src_folder /ex06/ :day_variable ex06.sql
+\i :full_path
+
+\echo '\n\t\033[0;32m~~~~EXERCISE_07~~~~\033[0m'
+\set full_path :src_folder /ex07/ :day_variable ex07.sql
+\i :full_path
+
+\echo '\n\t\033[0;32m~~~~EXERCISE_08~~~~\033[0m'
+\set full_path :src_folder /ex08/ :day_variable ex08.sql
+\i :full_path
+--
 
 
 
