@@ -7,7 +7,7 @@ from (
 			join pizzeria on pizzeria.id = person_visits.pizzeria_id
 		group by pizzeria.name
 	) as p_v
-	right join(
+	full join(
 		select pizzeria.name,
 			count(pizzeria.id) as count_po
 		from person_order
