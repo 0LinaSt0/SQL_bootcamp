@@ -5,7 +5,7 @@ select person.name,
 		as discount_price,
 	pizzeria.name as pizzeria_name
 from person_order
-	join person_discounts using(person_id)
+	join person_discounts on person_order.id = person_discounts.person_id
 	join person on person.id = person_order.person_id
 	join menu on menu.id = person_order.menu_id
 	join pizzeria on pizzeria.id = menu.pizzeria_id
