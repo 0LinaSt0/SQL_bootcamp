@@ -10,7 +10,8 @@
 
 /*step_1*/ \echo "====> SESSION #1";
 
-/*step_2*/ begin transaction isolation level read committed; --possible to write just beging because read committed is default way
+--possible to write just begin because read committed is default way
+/*step_2*/ begin transaction isolation level read committed;
 
 /*step_3*/ select * from pizzeria where name = 'Pizza Hut';
 /*step_4*/ update pizzeria set raitin = 5 where name = 'Pizza Hut';
@@ -22,7 +23,8 @@
 
 /*step_1*/ \echo "====> SESSION #2";
 
-/*step_2*/ begin transaction isolation level read committed; --possible to write just beging because read committed is default way
+--possible to write just begin because read committed is default way
+/*step_2*/ begin transaction isolation level read committed;
 
 /*step_3*/ select * from pizzeria where name = 'Pizza Hut';
 /*step_7*/ select * from pizzeria where name = 'Pizza Hut';

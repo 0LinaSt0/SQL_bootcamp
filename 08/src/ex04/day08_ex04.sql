@@ -1,8 +1,11 @@
 /*
- * NON_REPEATABLE ANOMALY:
- * 	Then transaction read a row and then reads it again a bit later
- * 	but gets a different result because row was updated in between
- * 	by another transaction
+ * SERIALIZABLE - this isolation level provides the strictest transaction isolation:
+ * 				  emulates serial transaction execution for all committed transactions.
+ * 				  as if transactions had been executed one after another, serially,
+ * 				  rather than concurrently.
+ * 				  It works exactly the same as Repeatable Read except that it monitors
+ * 				  for conditions which could make execution of a concurrent set of serializable
+ * 				  transactions.
  *
  *
  * session #1 (x)
@@ -21,10 +24,9 @@
 
 -- SESSION #1
 
-/*step_1*/	\echo "====> SESSION #1";
+/*step_1*/ \echo "====> SESSION #1";
 
---possible to write just begin because read committed is default way
-/*step_2*/	begin transaction isolation level read committed;
+/*step_2*/ 	begin transaction isolation level serializable;
 
 /*step_3*/	select rating from pizzeria where name = 'Pizza Hut';
 
@@ -37,8 +39,7 @@
 
 /*step_1*/	\echo "====> SESSION #2";
 
---possible to write just begin because read committed is default way
-/*step_2*/	begin transaction isolation level read committed;
+/*step_2*/	begin transaction isolation level serializable;
 
 /*step_4*/	update pizzeria set rating = 3.6 where name = 'Pizza Hut';
 /*step_5*/	commit;
