@@ -25,25 +25,25 @@
 
 -- SESSION #1
 
-/*step_1*/	\echo "====> SESSION #1";
+/*step_1*/	\echo "====> SESSION #1"
 
 /*step_2*/	show transaction isolation level;
 /*step_3*/	begin;
 
 /*step_4*/	select * from pizzeria where name = 'Pizza Hut';
-/*step_6*/	update pizzeria set raitin = 4 where name = 'Pizza Hut';
+/*step_6*/	update pizzeria set rating = 4 where name = 'Pizza Hut';
 /*step_8*/	commit;
 /*step_10*/	select * from pizzeria where name = 'Pizza Hut';
 
 
 -- SESSION #2
 
-/*step_1*/	\echo "====> SESSION #2";
+/*step_1*/	\echo "====> SESSION #2"
 
 /*step_2*/	show transaction isolation level;
 /*step_3*/	begin;
 
 /*step_5*/	select * from pizzeria where name = 'Pizza Hut';
-/*step_7*/	update pizzeria set raitin = 3.6 where name = 'Pizza Hut';
+/*step_7*/	update pizzeria set rating = 3.6 where name = 'Pizza Hut';
 /*step_9*/	commit;
 /*step_11*/	select * from pizzeria where name = 'Pizza Hut';

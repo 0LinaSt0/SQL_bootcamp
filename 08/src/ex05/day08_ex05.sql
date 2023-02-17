@@ -22,21 +22,21 @@
 
 -- SESSION #1
 
-/*step_1*/ \echo "====> SESSION #1";
+/*step_1*/ \echo "====> SESSION #1"
 
 --possible to write just begin because read committed is default way
 /*step_2*/	begin transaction isolation level read committed;
 
-/*step_3*/	select sum(rating) from pizzeria where name = 'Pizza Hut';
+/*step_3*/	select sum(rating) from pizzeria;
 
-/*step_6*/	select sum(rating) from pizzeria where name = 'Pizza Hut';
+/*step_6*/	select sum(rating) from pizzeria;
 /*step_7*/	commit;
-/*step_8*/	select sum(rating) from pizzeria where name = 'Pizza Hut';
+/*step_8*/	select sum(rating) from pizzeria;
 
 
 -- SESSION #2
 
-/*step_1*/	\echo "====> SESSION #2";
+/*step_1*/	\echo "====> SESSION #2"
 
 --possible to write just begin because read committed is default way
 /*step_2*/	begin transaction isolation level read committed;
@@ -44,4 +44,4 @@
 /*step_4*/	update pizzeria set rating = 1 where name = 'Pizza Hut';
 /*step_5*/	commit;
 
-/*step_9*/	select sum(rating) from pizzeria where name = 'Pizza Hut';
+/*step_9*/	select sum(rating) from pizzeria;

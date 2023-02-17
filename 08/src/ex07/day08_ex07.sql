@@ -21,23 +21,23 @@
 
 -- SESSION #1
 
-/*step_1*/	\echo "====> SESSION #1";
+/*step_1*/	\echo "====> SESSION #1"
 
 /*step_2*/	show transaction isolation level;
 /*step_3*/	begin;
 
-/*step_4*/	update pizzeria set raitin = 0 where id = 1;
-/*step_6*/	update pizzeria set raitin = 0 where id = 2;
+/*step_4*/	update pizzeria set rating = 0 where id = 1;
+/*step_6*/	update pizzeria set rating = 0 where id = 2;
 /*step_8*/	commit;
 
 
 -- SESSION #2
 
-/*step_1*/	\echo "====> SESSION #2";
+/*step_1*/	\echo "====> SESSION #2"
 
 /*step_2*/	show transaction isolation level;
 /*step_3*/	begin;
 
-/*step_5*/	update pizzeria set raitin = 0 where id = 2;
-/*step_7*/	update pizzeria set raitin = 0 where id = 1;
+/*step_5*/	update pizzeria set rating = 0 where id = 2;
+/*step_7*/	update pizzeria set rating = 0 where id = 1;
 /*step_9*/	commit;

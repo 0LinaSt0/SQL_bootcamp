@@ -21,7 +21,7 @@
 
 -- SESSION #1
 
-/*step_1*/	\echo "====> SESSION #1";
+/*step_1*/	\echo "====> SESSION #1"
 
 --possible to write just begin because read committed is default way
 /*step_2*/	begin transaction isolation level read committed;
@@ -35,7 +35,7 @@
 
 -- SESSION #2
 
-/*step_1*/	\echo "====> SESSION #2";
+/*step_1*/	\echo "====> SESSION #2"
 
 --possible to write just begin because read committed is default way
 /*step_2*/	begin transaction isolation level read committed;
