@@ -28,5 +28,6 @@
 
 /*step_3*/ select * from pizzeria where name = 'Pizza Hut';
 /*step_7*/ select * from pizzeria where name = 'Pizza Hut';
+/*step_8*/ commit;
 
 

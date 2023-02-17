@@ -41,7 +41,7 @@
 
 /*step_2*/	begin transaction isolation level serializable;
 
-/*step_4*/	update pizzeria set rating = 3.6 where name = 'Pizza Hut';
+/*step_4*/	update pizzeria set rating = 3.0 where name = 'Pizza Hut';
 /*step_5*/	commit;
 
 /*step_9*/	select rating from pizzeria where name = 'Pizza Hut';
