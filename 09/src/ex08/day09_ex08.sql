@@ -1,20 +1,3 @@
-/*
-create or replace sequence seq_fibonacci
-	start 0
-	increment 1;
-
-create or replace function fnc_fibonacci (pstop integer default 10)
-	returns table(number bigint) as
-$$
-begin
-	return query (
-		select
-	)
-end;
-$$ language plpgsql;
-*/
-
-
 create or replace function fnc_fibonacci (pstop integer default 10)
 	returns table(number bigint) as
 $$
@@ -26,10 +9,12 @@ $$
 		select
 			(c.number1 + c.number2) as number1,
 			c.number1 as number2
-		where number1 < pstop
+		from count as c
+		where (c.number1 + c.number2) < pstop
 	)
-	select number1 as number from count limit 10
+	select number1 as number from count
 $$ language sql;
 
 
 select * from fnc_fibonacci();
+select * from fnc_fibonacci(100);

@@ -17,5 +17,4 @@ create trigger trg_person_update_audit
 update person set name = 'Bulat' where id = 10;
 update person set name = 'Damir' where id = 10;
 
-select * from person;
 select * from person_audit;

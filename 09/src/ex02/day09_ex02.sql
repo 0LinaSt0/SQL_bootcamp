@@ -15,5 +15,4 @@ create trigger trg_person_delete_audit
 
 delete from person where id = 10;
 
-select * from person;
 select * from person_audit;

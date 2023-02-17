@@ -54,6 +54,5 @@ insert into person(id, name, age, gender, address)
 
 -- check inserting
 select * from person_audit;
-select * from person;
 
 

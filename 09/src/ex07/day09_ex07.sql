@@ -19,4 +19,4 @@ end;
 $$ language plpgsql;
 
 
-select func_minimum(varidatic arr => array[10.0, -1.0, 5.0, 4.4]);
+select func_minimum(variadic arr => array[10.0, -1.0, 5.0, 4.4]);
