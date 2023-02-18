@@ -10,24 +10,26 @@
  * For starting script to execute command '\i' with absolute path
  * to this file as example below:
  * 		 _______________________________________________________________
- * 		| $ \i /Users/msalena/Desktop/SQL_bootcamp/team00/src/start.sql	|
+ * 		| $ \i /Users/msalena/Desktop/SQL_bootcamp/team01/src/start.sql	|
  * 		 ---------------------------------------------------------------
  */
 
 -- SET VARIABLES
-\set project_path /Users/msalena/Desktop/SQL_bootcamp/team00
+\set project_path /Users/msalena/Desktop/SQL_bootcamp/team01
 
 \set utilst_path :project_path / ../utils
 \set recreate_db_path :utilst_path /recreate_sql_db.sql
 
+\set model_path :project_path /materials/rush01_model.sql
 \set src_folder :project_path /src
 
-\set day_variable team00_
+\set day_variable team01_
 --
 
 
  -- REFRESH DATABASE
 \i :recreate_db_path
+\i :model_path
 --
 
 
