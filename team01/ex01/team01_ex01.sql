@@ -37,6 +37,31 @@
 	order by 1 desc, 2 asc, 3 asc;
  */
 
+/*
+ * Vertion with one loop:
+ * ________________________________________________________________________________________________________
+	create or replace function fnc_find_nearest_rate(current_currency_id bigint, balance_updated timestamp)
+		returns numeric as
+	$$
+	begin
+		return (
+			with cte_aaa as (
+				select rate_to_usd, updated, (updated - balance_updated) as dif
+				from currency
+				where id = current_currency_id
+				order by (updated - balance_updated)
+			)
+			select (case
+					when (select dif from cte_aaa limit 1) >= interval '0 second'
+						then (select rate_to_usd from cte_aaa limit 1)
+					else (select rate_to_usd from cte_aaa where dif < interval '0 second' order by updated desc limit 1)
+				end) as rate_to_usd
+			limit 1
+		);
+	end;
+	$$ language plpgsql;
+ */
+
 
 -- INSERING STATEMENTS FROM SUBJECT
 insert into currency values (100, 'EUR', 0.85, '2022-01-01 13:29');
