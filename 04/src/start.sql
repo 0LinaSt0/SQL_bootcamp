@@ -21,7 +21,7 @@
 \set recreate_db_path :utilst_path /recreate_sql_db.sql
 \set day03_changes :utilst_path /changes_of_day03.sql
 
-\set model_path :project_path /materials/model.sql
+\set model_path :utilst_path /model.sql
 \set src_folder :project_path /src
 
 \set day_variable day04_

@@ -20,7 +20,7 @@
 \set utilst_path :project_path / ../utils
 \set recreate_db_path :utilst_path /recreate_sql_db.sql
 
-\set model_path :project_path /materials/rush01_model.sql
+\set model_path :utilst_path rush01_model.sql
 \set src_folder :project_path /src
 
 \set day_variable team01_

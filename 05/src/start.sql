@@ -24,7 +24,7 @@
 
 \set print_indexes_list :utilst_path /indexes_list.sql
 
-\set model_path :project_path /materials/model.sql
+\set model_path :utilst_path /model.sql
 \set src_folder :project_path /src
 
 \set day_variable day05_
