@@ -1,3 +1,8 @@
+/*
+ * 	You should change variable:
+ * 	- 'table_catalog' which must be the name of database
+ */
+\set table_catalog '\'sql\''
 
 select obj_description('public.person_discounts'::regclass);
 
@@ -14,6 +19,6 @@ select
  
 from information_schema.columns cols
 where
-	cols.table_catalog = 'sql' and
+	cols.table_catalog = :table_catalog and
 	cols.table_schema = 'public' and
 	cols.table_name = 'person_discounts';
