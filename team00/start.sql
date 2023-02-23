@@ -26,15 +26,16 @@
 
  -- REFRESH DATABASE
 \i :recreate_db_path
+\echo '************************************************************'
 --
 
 
 -- EXECUTE EXERCISES
-\echo '\n\t\033[0;32m~~~~EXERCISE_00~~~~\033[0m'
+\echo '\n\t\033[0;34mEXERCISE_00\033[0m'
 \set full_path :project_path /ex00/ :day_variable ex00.sql
 \i :full_path
 
-\echo '\n\t\033[0;32m~~~~EXERCISE_01~~~~\033[0m'
+\echo '\n\t\033[0;34mEXERCISE_01\033[0m'
 \set full_path :project_path /ex01/ :day_variable ex01.sql
 \i :full_path
 --

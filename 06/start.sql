@@ -42,35 +42,35 @@
 
 
 -- EXECUTE EXERCISES
-\echo '\n\t\033[0;32m~~~~EXERCISE_00~~~~\033[0m'
+\echo '\n\t\033[0;34mEXERCISE_00\033[0m'
 \set full_path :project_path /ex00/ :day_variable ex00.sql
 \i :full_path
 
-\echo '\n\t\033[0;32m~~~~EXERCISE_01~~~~\033[0m'
+\echo '\n\t\033[0;34mEXERCISE_01\033[0m'
 \set full_path :project_path /ex01/ :day_variable ex01.sql
 \i :full_path
 
-\echo '\n\t\033[0;32m~~~~EXERCISE_02~~~~\033[0m'
+\echo '\n\t\033[0;34mEXERCISE_02\033[0m'
 \set full_path :project_path /ex02/ :day_variable ex02.sql
 \i :full_path
 
-\echo '\n\t\033[0;32m~~~~EXERCISE_03~~~~\033[0m'
+\echo '\n\t\033[0;34mEXERCISE_03\033[0m'
 \set full_path :project_path /ex03/ :day_variable ex03.sql
 \i :full_path
 
-\echo '\n\t\033[0;32m~~~~EXERCISE_04~~~~\033[0m'
+\echo '\n\t\033[0;34mEXERCISE_04\033[0m'
 \set full_path :project_path /ex04/ :day_variable ex04.sql
 \i :full_path
 /*Check constraints*/
 \d+ person_discounts
 
-\echo '\n\t\033[0;32m~~~~EXERCISE_05~~~~\033[0m'
+\echo '\n\t\033[0;34mEXERCISE_05\033[0m'
 \set full_path :project_path /ex05/ :day_variable ex05.sql
 \i :full_path
 /*Check comments*/
 \i :print_comments
 
-\echo '\n\t\033[0;32m~~~~EXERCISE_06~~~~\033[0m'
+\echo '\n\t\033[0;34mEXERCISE_06\033[0m'
 \set full_path :project_path /ex06/ :day_variable ex06.sql
 \i :full_path
 --

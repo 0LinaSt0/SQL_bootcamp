@@ -2,6 +2,9 @@
 # 21-School project
 ---
 
+change username and database name
+
+
 Useful command:
 
 1. Connect to DB:
