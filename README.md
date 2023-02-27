@@ -2,21 +2,50 @@
 # SQL_BOOTCAMP
 ---
 ### Description
-1. DAY_00:
-	> How to get needed data based on basic constructions of SQL
-2. DAY_01:
-	> How to get needed data based on sets constructions and simple JOINs
-3. DAY_02:
-	> How to get needed data based on different structures JOINs
+1. [DAY_00](https://github.com/0LinaSt0/SQL_bootcamp/tree/main/00):
+	How to get needed data based on basic constructions of SQL
+	> select, from, where, order by, case(when/there), subquery
+2. [DAY_01](https://github.com/0LinaSt0/SQL_bootcamp/tree/main/01):
+	How to get needed data based on sets constructions and simple JOINs
+	> union [all], intersect [all], except [all], join (inner, cross, naturale)
+3. [DAY_02](https://github.com/0LinaSt0/SQL_bootcamp/tree/main/02):
+	How to get needed data based on different structures JOINs
+	> join (inner, left, full), generate_series(), with .. as()
+4. [DAY_03](https://github.com/0LinaSt0/SQL_bootcamp/tree/main/03):
+	How to change data based on DML language
+	> insert, update, set, delete; more practise with: joins, except/union/intersect
+5. [DAY_04](https://github.com/0LinaSt0/SQL_bootcamp/tree/main/04):
+	How to use a virtual view and physical snapshot of data
+	> create/drop view, materialized view
+6. [DAY_05](https://github.com/0LinaSt0/SQL_bootcamp/tree/main/05):
+	How and when to create database indexes
+	> create/drop index, multicolumn index, unique index explain analyze, enable_seqscan
+7. [DAY_06](https://github.com/0LinaSt0/SQL_bootcamp/tree/main/06):
+	How to add a new business feature into our data model
+	> create/drop/delete table, alter, add, comment, sequence
+8. [DAY_07](https://github.com/0LinaSt0/SQL_bootcamp/tree/main/07):
+	How to use specific OLAP constructions to get a “Value” from data
+	> group by, limit, coalesce(), count()/max()/min()/avg(), round(), trim_scale()
+9. [DAY_08](https://github.com/0LinaSt0/SQL_bootcamp/tree/main/08):
+	How database works with transactions and isolation levels
+	> transaction isolation level read committed/repeatable read/serializable/
+10. [DAY_09](https://github.com/0LinaSt0/SQL_bootcamp/tree/main/09):
+	How to create and use functional blocks in Databases
+	> create/drop function, trigger
+11. [TEAM_00](https://github.com/0LinaSt0/SQL_bootcamp/tree/main/team00):
+	Implementing a quick solution on SQL to achieve results of Traveling Salesman Problem
+	> Understending DDL/DML consept, recursive view, function
+12. [TEAM_01](https://github.com/0LinaSt0/SQL_bootcamp/tree/main/team01):
+	What DWH is and how to create a first ETL process
+	> DataWareHouse systems, ETL (extract, transform, and load)
 
-...
 
 ---
 ### Execute sql scripts
 *STEP_1*
-clone repo as:
+clone repo as and go to cloned project:
 ```shell
-git clone -b main git@github.com:0LinaSt0/SQL_bootcamp.git
+git clone -b main git@github.com:0LinaSt0/SQL_bootcamp.git && cd SQL_bootcamp/
 ```
 *STEP_2*
 change variables in file 'utils/recreate_sql_db.sql' and 'utils/comments_list.sql':

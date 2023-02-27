@@ -14,6 +14,7 @@
  * 	-----------------------------------------------------
  */
 
+
 -- SET VARIABLES
 \set project_path /Users/msalena/Desktop/SQL_bootcamp/01
 

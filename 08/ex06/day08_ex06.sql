@@ -17,7 +17,7 @@
 
 -- SESSION #1
 
-/*step_1*/ \echo "====> SESSION #1"
+/*step_1*/	\echo "====> SESSION #1"
 
 /*step_2*/	begin transaction isolation level repeatable read;
 
