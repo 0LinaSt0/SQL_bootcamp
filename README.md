@@ -4,7 +4,7 @@
 ### Description
 1. [DAY_00](https://github.com/0LinaSt0/SQL_bootcamp/tree/main/00):
 	How to get needed data based on basic constructions of SQL
-	> select, from, where, order by, case(when/there), subquery
+	> select, from, where, order by, case(when/then), subquery
 2. [DAY_01](https://github.com/0LinaSt0/SQL_bootcamp/tree/main/01):
 	How to get needed data based on sets constructions and simple JOINs
 	> union [all], intersect [all], except [all], join (inner, cross, naturale)
